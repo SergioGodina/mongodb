@@ -10,9 +10,11 @@ const app = express();
 
 app.use(express.json());
 
-app.listen(3000, () => {
-    console.log(`Server Started at ${3000}`)
-})
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.warn(`App listening on http://localhost:${PORT}`);
+});
 
 app.use('/api', logs)
 
