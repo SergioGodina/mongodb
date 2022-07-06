@@ -9,6 +9,9 @@ module.exports = router;
 router.post('/users/post', async(req, res) => {
     const data = new User({
         username: req.body.username,
+        email: req.body.email,
+        name: req.body.name,
+        lastname: req.body.lastname,
         password: req.body.password,
         rol: req.body.rol,
         state: req.body.state
