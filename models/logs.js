@@ -9,7 +9,7 @@ const logs = new mongoose.Schema({
         required: true,
         type: Number
     },
-    current_humedity: {
+    current_humidity: {
         required: true,
         type: Number
     },
@@ -17,7 +17,19 @@ const logs = new mongoose.Schema({
         required: true,
         type: Number
     },
-    state: {
+    pumb_state: {
+        required: true,
+        type: Boolean
+    },
+    mHigh_state: {
+        required: true,
+        type: Boolean
+    },
+    mLow_state: {
+        required: true,
+        type: Boolean
+    },
+    autoMode_state: {
         required: true,
         type: Boolean
     }
