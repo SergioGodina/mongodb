@@ -3,11 +3,14 @@ logs
 Estructura
 
     {
-        "datetime": 11111,
-        "current_temperature": 20,
-        "current_humedity": 60,
-        "adjustment_temperature": 25,
-        "state": true
+      "datetime": 11,
+      "current_temperature": 11,
+      "current_humidity": 11,
+      "adjustment_temperature": 11,
+      "pumb_state": true,
+      "mHigh_state": true,
+      "mLow_state": false,
+      "autoMode_state":true
     }
 
 
@@ -27,12 +30,15 @@ users
 
 Estructura
 
-    {
-        "username": "test",
-        "password": "test",
-        "rol": "Admin",
-        "state": true
-    }
+{
+      "username":"Adrian",
+      "email":"sergiogodina18@gmail.com",
+      "name":"Sergio",
+      "lastname":"Godina",
+      "password":"123456",
+      "rol":"Admin",
+      "state": true 
+   }
 
 
 https://mongodbutch.herokuapp.com/api/users/post - Agrega un documento a la coleccion de users
