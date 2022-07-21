@@ -30,7 +30,17 @@ router.post('/logs/post', async(req, res) => {
 //Get all Method
 router.get('/logs/getAll', async(req, res) => {
     try {
-        const data = await Log.find();
+        const data = await Log.find().sort({ _id: -1 });
+        res.json(data)
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+
+router.get('/logs/getLast', async(req, res) => {
+    try {
+        const data = await Log.find().sort({ _id: -1 }.limit(1));
         res.json(data)
     } catch (error) {
         res.status(500).json({ message: error.message })
